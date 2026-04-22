@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f1f49"/>
+      <stop offset="55%" stop-color="#080c16"/>
+      <stop offset="100%" stop-color="#33270a"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2a8dff"/>
+      <stop offset="100%" stop-color="#f6d365"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect x="70" y="70" width="1060" height="760" rx="42" fill="none" stroke="url(#line)" stroke-width="5"/>
+  <circle cx="600" cy="390" r="110" fill="none" stroke="#d9dff0" stroke-width="10" opacity="0.9"/>
+  <path d="M525 505h150c35 0 63 28 63 63v25H462v-25c0-35 28-63 63-63z" fill="none" stroke="#d9dff0" stroke-width="10" opacity="0.9"/>
+  <text x="600" y="685" text-anchor="middle" fill="#f8f8fc" font-size="42" font-family="Montserrat, Arial, sans-serif" font-weight="700">
+    INSERIR FOTO REAL AQUI
+  </text>
+  <text x="600" y="735" text-anchor="middle" fill="#f6d365" font-size="30" font-family="Montserrat, Arial, sans-serif" font-weight="700">
+    Paraíso VIP Estamparia
+  </text>
+</svg>
