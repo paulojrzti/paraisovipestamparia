@@ -1,89 +1,218 @@
 /* ═══════════════════════════════════════════════════════════════
-   Paraíso VIP Estamparia — Landing page de conversão
+   Paraíso VIP Estamparia — Landing de conversão
+   - Links WhatsApp centralizados
+   - Reveal on scroll
+   - Fallback para imagens que não carregam
 ════════════════════════════════════════════════════════════════ */
 
-const WHATSAPP_LINK =
-  "https://wa.me/5500000000000?text=Oi%2C%20quero%20um%20or%C3%A7amento%20da%20Para%C3%ADso%20VIP%20Estamparia";
+/* Troque pelo número real quando tiver (formato: 55 + DDD + número, só dígitos) */
+const WHATSAPP_NUMERO = "5500000000000";
+const WHATSAPP_MENSAGEM = "Oi, quero um orçamento da Paraíso VIP Estamparia";
+const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(WHATSAPP_MENSAGEM)}`;
 
 const IMAGE_FALLBACK = "assets/placeholder-real.svg";
 
-/* ── Links WhatsApp ──────────────────────────────────────────── */
+
+/* ── Aplica link do WhatsApp em todos os CTAs ────────────────── */
 document.querySelectorAll(".js-whatsapp-link").forEach((el) => {
   el.setAttribute("href", WHATSAPP_LINK);
   el.setAttribute("target", "_blank");
   el.setAttribute("rel", "noopener noreferrer");
 });
 
-/* ── Scroll reveal ───────────────────────────────────────────── */
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("in-view");
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.1, rootMargin: "0px 0px -32px 0px" }
-);
 
-document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+/* ── Scroll reveal ──────────────────────────────────────────── */
+const supportsIO = "IntersectionObserver" in window;
+
+if (supportsIO) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.08, rootMargin: "0px 0px -40px 0px" }
+  );
+
+  document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+} else {
+  document.querySelectorAll(".reveal").forEach((el) => el.classList.add("in-view"));
+}
 
 
-/* ── Carousel ────────────────────────────────────────────────── */
-(function () {
-  const track   = document.getElementById("carouselTrack");
-  const dotsWrap = document.getElementById("carDots");
-  const btnPrev  = document.querySelector(".car-prev");
-  const btnNext  = document.querySelector(".car-next");
-
-  if (!track) return;
-
-  const items = track.querySelectorAll(".sh-item");
-  const total = items.length;
-
-  /* Cria os dots */
-  items.forEach((_, i) => {
-    const d = document.createElement("button");
-    d.className = "car-dot" + (i === 0 ? " active" : "");
-    d.setAttribute("aria-label", "Ir para item " + (i + 1));
-    d.addEventListener("click", () => scrollTo(i));
-    dotsWrap.appendChild(d);
-  });
-
-  const dots = () => dotsWrap.querySelectorAll(".car-dot");
-
-  function getIndex() {
-    const itemW = items[0].offsetWidth + 14; /* width + gap */
-    return Math.round(track.scrollLeft / itemW);
-  }
-
-  function scrollTo(index) {
-    const itemW = items[0].offsetWidth + 14;
-    track.scrollTo({ left: index * itemW, behavior: "smooth" });
-  }
-
-  function updateUI() {
-    const i = getIndex();
-    dots().forEach((d, j) => d.classList.toggle("active", j === i));
-    if (btnPrev) btnPrev.disabled = i === 0;
-    if (btnNext) btnNext.disabled = i >= total - 1;
-  }
-
-  track.addEventListener("scroll", updateUI, { passive: true });
-  if (btnPrev) btnPrev.addEventListener("click", () => scrollTo(getIndex() - 1));
-  if (btnNext) btnNext.addEventListener("click", () => scrollTo(getIndex() + 1));
-
-  updateUI();
-})();
-
-/* ── Fallback para imagens que não carregam ─────────────────── */
-document.querySelectorAll("img:not(.topbar-logo):not(.hero-logo)").forEach((img) => {
+/* ── Fallback para imagens que não carregarem ───────────────── */
+document.querySelectorAll("img:not(.topbar-logo)").forEach((img) => {
   img.addEventListener("error", () => {
     if (!img.dataset.fallbackApplied) {
       img.dataset.fallbackApplied = "true";
       img.src = IMAGE_FALLBACK;
-      img.style.opacity = ".4";
+      img.style.opacity = ".35";
     }
   });
 });
+
+
+/* ── Hero parallax floating ─────────────────────────────────────
+   Portado do componente React "parallax-floating" para vanilla JS.
+   - Apenas em desktop (≥ 900px)
+   - Respeita prefers-reduced-motion
+   - Sensitivity negativa: imagens se movem na direção oposta do cursor
+───────────────────────────────────────────────────────────────── */
+(function initHeroParallax() {
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const isMobile = window.matchMedia("(max-width: 899px)").matches;
+  if (prefersReduced || isMobile) return;
+
+  const hero = document.querySelector(".hero");
+  if (!hero) return;
+
+  const items = Array.from(hero.querySelectorAll(".fx"));
+  if (!items.length) return;
+
+  const SENSITIVITY = -1;   // negativo = movimento contrário ao cursor (efeito profundidade)
+  const EASING      = 0.06; // menor = mais "manteiga", maior = mais rápido
+
+  const positions = items.map(() => ({ x: 0, y: 0 }));
+  const target    = { x: 0, y: 0 };
+
+  let rect = hero.getBoundingClientRect();
+  const updateRect = () => { rect = hero.getBoundingClientRect(); };
+  window.addEventListener("resize", updateRect, { passive: true });
+  window.addEventListener("scroll", updateRect, { passive: true });
+
+  hero.addEventListener("mousemove", (e) => {
+    target.x = e.clientX - rect.left - rect.width  / 2;
+    target.y = e.clientY - rect.top  - rect.height / 2;
+  }, { passive: true });
+
+  hero.addEventListener("mouseleave", () => {
+    target.x = 0;
+    target.y = 0;
+  });
+
+  let rafId = null;
+  let heroInView = true;
+
+  function shouldRun() {
+    return heroInView && !document.hidden;
+  }
+
+  function tick() {
+    if (!shouldRun()) {
+      rafId = null;
+      return;
+    }
+    for (let i = 0; i < items.length; i++) {
+      const item = items[i];
+      const depth = parseFloat(item.dataset.depth) || 1;
+      const strength = (depth * SENSITIVITY) / 20;
+
+      const tx = target.x * strength;
+      const ty = target.y * strength;
+
+      positions[i].x += (tx - positions[i].x) * EASING;
+      positions[i].y += (ty - positions[i].y) * EASING;
+
+      item.style.transform =
+        `translate3d(${positions[i].x.toFixed(2)}px, ${positions[i].y.toFixed(2)}px, 0)`;
+    }
+    rafId = requestAnimationFrame(tick);
+  }
+
+  function startLoop() {
+    if (rafId != null || !shouldRun()) {
+      return;
+    }
+    rafId = requestAnimationFrame(tick);
+  }
+
+  function stopLoop() {
+    if (rafId != null) {
+      cancelAnimationFrame(rafId);
+      rafId = null;
+    }
+  }
+
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        const e = entries[0];
+        heroInView = e.isIntersecting;
+        if (shouldRun()) {
+          startLoop();
+        } else {
+          stopLoop();
+        }
+      },
+      { root: null, threshold: 0, rootMargin: "0px" }
+    );
+    io.observe(hero);
+  }
+
+  function onVisibility() {
+    if (document.hidden) {
+      stopLoop();
+    } else if (shouldRun()) {
+      updateRect();
+      startLoop();
+    }
+  }
+  document.addEventListener("visibilitychange", onVisibility, { passive: true });
+
+  startLoop();
+})();
+
+
+/* ── Topbar transparente → opaca ────────────────────────────────
+   A topbar começa transparente sobre o hero escuro e vira branca
+   translúcida assim que o usuário rola além da metade do hero. */
+(function initTopbarScroll() {
+  const topbar = document.querySelector(".topbar");
+  const hero   = document.querySelector(".hero");
+  if (!topbar || !hero) return;
+
+  let ticking = false;
+
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const threshold = hero.offsetHeight * 0.55;
+      topbar.classList.toggle("is-scrolled", window.scrollY > threshold);
+      ticking = false;
+    });
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+})();
+
+
+/* ── Marquee infinito ───────────────────────────────────────────
+   Duplica o conteúdo do track pra garantir loop perfeito (o CSS
+   anima translateX de 0 até -50%, ou seja, uma "cópia" inteira).
+   Suporta data-speed (segundos) individual em cada track. */
+(function initMarquees() {
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  document.querySelectorAll("[data-marquee-track]").forEach((track) => {
+    const original = Array.from(track.children);
+    original.forEach((child) => {
+      const clone = child.cloneNode(true);
+      clone.setAttribute("aria-hidden", "true");
+      track.appendChild(clone);
+    });
+
+    const speed = parseFloat(track.dataset.speed);
+    if (!Number.isNaN(speed) && speed > 0) {
+      track.style.animationDuration = speed + "s";
+    }
+
+    if (prefersReduced) {
+      track.style.animation = "none";
+    }
+  });
+})();

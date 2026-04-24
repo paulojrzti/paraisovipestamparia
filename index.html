@@ -3,314 +3,437 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Camisas, canecas e kits personalizados com qualidade de verdade. Pedido sob medida, sem pedido mínimo absurdo. Atendimento direto no WhatsApp.">
-  <title>Paraíso VIP Estamparia | Personalizados Rápidos e Sob Medida</title>
+  <meta name="description" content="Camisas, garrafas, copos, agendas e kits personalizados. Produção rápida, sem pedido mínimo absurdo. Atendimento direto no WhatsApp.">
+  <title>Paraíso VIP Estamparia | Personalizados que chamam atenção</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- ─────────────────────────────────────────
-       BARRA FIXA — logo + CTA sempre visível
-  ───────────────────────────────────────── -->
-  <div class="topbar" id="topbar">
+  <!-- ═══════════════════════════════════════════════
+       TOPBAR — sempre visível, CTA encurta compra
+  ═══════════════════════════════════════════════ -->
+  <header class="topbar">
     <div class="container topbar-inner">
-      <img src="arte do paraiso vip para adesivo.png" alt="Paraíso VIP Estamparia" class="topbar-logo">
-      <a href="#" class="btn btn-green btn-sm js-whatsapp-link">
+      <a href="#hero" class="topbar-brand" aria-label="Paraíso VIP Estamparia">
+        <img src="assets/derived/logo-w360.webp" srcset="assets/derived/logo-w180.webp 180w, assets/derived/logo-w360.webp 360w" sizes="(max-width: 639px) 44vw, 200px" width="360" height="205" fetchpriority="high" decoding="async" alt="Paraíso VIP Estamparia" class="topbar-logo">
+      </a>
+      <a href="#" class="btn btn-whatsapp btn-sm js-whatsapp-link">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.12 1.524 5.855L.057 23.43a.75.75 0 0 0 .916.916l5.57-1.467A11.946 11.946 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.9 0-3.687-.497-5.236-1.37l-.375-.214-3.883 1.023 1.024-3.773-.234-.388A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-        Pedir orçamento
+        Chamar no WhatsApp
       </a>
     </div>
-  </div>
+  </header>
 
 
-  <!-- ─────────────────────────────────────────
-       HERO — produto primeiro, CTA direto
-  ───────────────────────────────────────── -->
-  <section class="hero" id="hero-section">
-    <div class="container hero-grid">
+  <!-- ═══════════════════════════════════════════════
+       DOBRA 1 — HERO  (parallax floating premium)
+       Texto centralizado + 8 imagens flutuantes de fundo
+       Overlay escuro + blur pra legibilidade
+  ═══════════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
 
-      <div class="hero-text">
-        <h1>Presente personalizado<br>pronto rápido<br>e do seu jeito</h1>
+    <!-- Camada de imagens flutuantes (parallax no desktop) -->
+    <div class="hero-parallax" aria-hidden="true">
+      <!-- Camada frontal (maiores, mais nítidas, nas quinas) -->
+      <div class="fx fx-1"  data-depth="0.6"><img src="assets/derived/camisa-01-w900.webp" srcset="assets/derived/camisa-01-w480.webp 360w, assets/derived/camisa-01-w900.webp 675w, assets/derived/camisa-01-w1400.webp 1050w" sizes="(max-width: 639px) 100px, 200px" width="675" height="900" decoding="async" fetchpriority="low" alt=""></div>
+      <div class="fx fx-2"  data-depth="2"><img src="assets/derived/garrafa-01-w900.webp" srcset="assets/derived/garrafa-01-w480.webp 360w, assets/derived/garrafa-01-w900.webp 675w, assets/derived/garrafa-01-w1400.webp 1050w" sizes="(max-width: 639px) 100px, 200px" width="675" height="900" decoding="async" fetchpriority="low" alt=""></div>
+      <div class="fx fx-3"  data-depth="1.2"><img src="assets/derived/copo-stanley-01-w900.webp" srcset="assets/derived/copo-stanley-01-w480.webp 480w, assets/derived/copo-stanley-01-w900.webp 900w, assets/derived/copo-stanley-01-w1400.webp 1280w" sizes="(max-width: 639px) 100px, 200px" width="900" height="675" decoding="async" fetchpriority="low" alt=""></div>
+      <div class="fx fx-4"  data-depth="0.8"><img src="assets/derived/agenda-01-w900.webp" srcset="assets/derived/agenda-01-w480.webp 360w, assets/derived/agenda-01-w900.webp 675w, assets/derived/agenda-01-w1400.webp 960w" sizes="(max-width: 639px) 100px, 200px" width="675" height="900" decoding="async" fetchpriority="low" alt=""></div>
+      <div class="fx fx-5"  data-depth="1.6"><img src="assets/derived/camisa-04-w900.webp" srcset="assets/derived/camisa-04-w480.webp 360w, assets/derived/camisa-04-w900.webp 675w, assets/derived/camisa-04-w1400.webp 1050w" sizes="(max-width: 639px) 100px, 200px" width="675" height="900" decoding="async" fetchpriority="low" alt=""></div>
+      <div class="fx fx-6"  data-depth="3"><img src="assets/derived/kit-pronto-01-w900.webp" srcset="assets/derived/kit-pronto-01-w480.webp 360w, assets/derived/kit-pronto-01-w900.webp 675w, assets/derived/kit-pronto-01-w1400.webp 900w" sizes="(max-width: 639px) 100px, 200px" width="675" height="900" decoding="async" fetchpriority="low" alt=""></div>
+      <div class="fx fx-7"  data-depth="1"><img src="assets/derived/caneca-01-w900.webp" srcset="assets/derived/caneca-01-w480.webp 360w, assets/derived/caneca-01-w900.webp 675w, assets/derived/caneca-01-w1400.webp 900w" sizes="(max-width: 639px) 100px, 200px" width="675" height="900" decoding="async" fetchpriority="low" alt=""></div>
+      <div class="fx fx-8"  data-depth="2.4"><img src="assets/derived/detalhe-estampa-01-w900.webp" srcset="assets/derived/detalhe-estampa-01-w480.webp 360w, assets/derived/detalhe-estampa-01-w900.webp 675w, assets/derived/detalhe-estampa-01-w1400.webp 900w" sizes="(max-width: 639px) 100px, 200px" width="675" height="900" decoding="async" fetchpriority="low" alt=""></div>
+      <!-- Camada de fundo (menores, mais blur, preenchem o ambiente) -->
+      <div class="fx fx-9"  data-depth="0.4"><img src="assets/derived/kit-familia-camisas-01-w900.webp" srcset="assets/derived/kit-familia-camisas-01-w480.webp 360w, assets/derived/kit-familia-camisas-01-w900.webp 675w, assets/derived/kit-familia-camisas-01-w1400.webp 1050w" sizes="(max-width: 639px) 100px, 200px" width="675" height="900" decoding="async" fetchpriority="low" alt=""></div>
+      <div class="fx fx-10" data-depth="1.8"><img src="assets/derived/garrafa-03-w900.webp" srcset="assets/derived/garrafa-03-w480.webp 360w, assets/derived/garrafa-03-w900.webp 675w, assets/derived/garrafa-03-w1400.webp 960w" sizes="(max-width: 639px) 100px, 200px" width="675" height="900" decoding="async" fetchpriority="low" alt=""></div>
+      <div class="fx fx-11" data-depth="2.2"><img src="assets/derived/copo-stanley-time-03-w900.webp" srcset="assets/derived/copo-stanley-time-03-w480.webp 480w, assets/derived/copo-stanley-time-03-w900.webp 900w, assets/derived/copo-stanley-time-03-w1400.webp 1400w" sizes="(max-width: 639px) 100px, 200px" width="900" height="675" decoding="async" fetchpriority="low" alt=""></div>
+      <div class="fx fx-12" data-depth="1.5"><img src="assets/derived/camisa-igreja-01-w900.webp" srcset="assets/derived/camisa-igreja-01-w480.webp 384w, assets/derived/camisa-igreja-01-w900.webp 720w, assets/derived/camisa-igreja-01-w1400.webp 1080w" sizes="(max-width: 639px) 100px, 200px" width="720" height="900" decoding="async" fetchpriority="low" alt=""></div>
+    </div>
 
-        <p class="hero-sub">
-          Camisas, canecas e kits personalizados com qualidade de verdade,
-          sem enrolação e sem pedido mínimo absurdo.
-        </p>
+    <!-- Vignette central: escurece o miolo pra legibilidade -->
+    <div class="hero-vignette" aria-hidden="true"></div>
 
-        <ul class="check-list">
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1fad5e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Produção rápida
-          </li>
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1fad5e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Pedido sob medida
-          </li>
-          <li>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1fad5e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Atendimento direto no WhatsApp
-          </li>
-        </ul>
+    <!-- Conteúdo central -->
+    <div class="container hero-content">
+      <h1 class="hero-title">
+        <span class="hero-title__gold">Presentes</span>
+        <span class="hero-title__blue">personalizados.</span>
+      </h1>
 
-        <a href="#" class="btn btn-green btn-lg js-whatsapp-link" id="hero-cta">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.12 1.524 5.855L.057 23.43a.75.75 0 0 0 .916.916l5.57-1.467A11.946 11.946 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.9 0-3.687-.497-5.236-1.37l-.375-.214-3.883 1.023 1.024-3.773-.234-.388A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-          Ver orçamento agora
+      <ul class="hero-kickers" role="list">
+        <li><span class="kicker-dash" aria-hidden="true"></span>Pronto</li>
+        <li><span class="kicker-dash" aria-hidden="true"></span>Rápido</li>
+        <li><span class="kicker-dash" aria-hidden="true"></span>e do seu jeito</li>
+      </ul>
+
+      <a href="#" class="btn btn-whatsapp btn-lg js-whatsapp-link">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.12 1.524 5.855L.057 23.43a.75.75 0 0 0 .916.916l5.57-1.467A11.946 11.946 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.9 0-3.687-.497-5.236-1.37l-.375-.214-3.883 1.023 1.024-3.773-.234-.388A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Falar no WhatsApp agora
+      </a>
+      <p class="hero-microtext">Resposta rápida • Sem compromisso</p>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       DOBRA 2 — ESCOLHA RÁPIDA  (direção de decisão)
+       Fundo off-white. 6 categorias com imagem real.
+  ═══════════════════════════════════════════════ -->
+  <section class="s-categorias reveal">
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow dark">Categorias</span>
+        <h2>O que você quer <em>personalizar</em>?</h2>
+        <p>Clica numa opção e a gente já continua no WhatsApp com ideia pronta.</p>
+      </div>
+
+      <div class="cat-grid">
+        <a href="#" class="cat-card js-whatsapp-link">
+          <div class="cat-photo"><img src="assets/derived/camisa-03-w900.webp" srcset="assets/derived/camisa-03-w480.webp 360w, assets/derived/camisa-03-w900.webp 675w, assets/derived/camisa-03-w1400.webp 1050w" sizes="(max-width: 639px) 100vw, (max-width: 899px) 50vw, 33vw" width="675" height="900" decoding="async" alt="Camisas personalizadas" loading="lazy"></div>
+          <div class="cat-info">
+            <h3>Camisas</h3>
+            <p>Eventos, igrejas, equipes, empresas</p>
+            <span class="cat-link">Quero essa →</span>
+          </div>
         </a>
-      </div>
 
-      <div class="hero-photo">
-        <img src="assets/hero/hero-lifestyle.webp" alt="Camisas e produtos personalizados Paraíso VIP" class="hero-img">
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ─────────────────────────────────────────
-       VITRINE — produtos reais em destaque
-  ───────────────────────────────────────── -->
-  <section class="s-showcase reveal">
-    <div class="container">
-      <div class="sec-head">
-        <h2>Olha como seu pedido pode ficar</h2>
-        <p>Nome, número, foto ou logo, você pede, a gente faz</p>
-      </div>
-
-      <div class="carousel">
-        <button class="car-btn car-prev" aria-label="Anterior">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-        </button>
-
-        <div class="carousel-track" id="carouselTrack">
-          <article class="sh-item">
-            <img src="assets/galeria/camiseta-estampada.webp" alt="Camiseta com nome e número personalizados">
-          </article>
-          <article class="sh-item">
-            <img src="assets/galeria/caneca-nome.webp" alt="Caneca personalizada com nome">
-          </article>
-          <article class="sh-item">
-            <img src="assets/galeria/caneca-foto.webp" alt="Caneca personalizada com foto">
-          </article>
-          <article class="sh-item">
-            <img src="assets/galeria/kit-pronto.webp" alt="Kit personalizado completo">
-          </article>
-          <article class="sh-item">
-            <img src="assets/galeria/close-estampa.webp" alt="Close da estampa personalizada">
-          </article>
-          <article class="sh-item">
-            <img src="assets/galeria/caneca-frase.webp" alt="Caneca com frase personalizada">
-          </article>
-          <article class="sh-item">
-            <img src="assets/IMG_0337.jpg" alt="Produto personalizado em destaque">
-          </article>
-          <article class="sh-item">
-            <img src="assets/IMG_0339.jpg" alt="Personalizacao em produto">
-          </article>
-          <article class="sh-item">
-            <img src="assets/IMG_0346.jpg" alt="Estampa personalizada em alta qualidade">
-          </article>
-          <article class="sh-item">
-            <img src="assets/IMG_0442.jpg" alt="Mais um exemplo de produto personalizado">
-          </article>
-          <article class="sh-item">
-            <img src="assets/IMG_0446.jpg" alt="Produto personalizado feito sob medida">
-          </article>
-          <article class="sh-item">
-            <img src="assets/IMG_0460.jpg" alt="Trabalho de personalizacao finalizado">
-          </article>
-        </div>
-
-        <button class="car-btn car-next" aria-label="Próximo">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-        </button>
-      </div>
-
-      <div class="car-dots" id="carDots" aria-hidden="true"></div>
-    </div>
-  </section>
-
-
-  <!-- ─────────────────────────────────────────
-       PROBLEMAS — identificação imediata
-  ───────────────────────────────────────── -->
-  <section class="s-problems reveal">
-    <div class="container">
-      <h2 class="problems-title">Se você já passou por isso, a gente resolve:</h2>
-      <div class="problems-grid">
-        <div class="problem-item">
-          <span class="problem-x" aria-hidden="true">✕</span>
-          <span>Pedido atrasado</span>
-        </div>
-        <div class="problem-item">
-          <span class="problem-x" aria-hidden="true">✕</span>
-          <span>Estampa mal feita</span>
-        </div>
-        <div class="problem-item">
-          <span class="problem-x" aria-hidden="true">✕</span>
-          <span>Atendimento que some</span>
-        </div>
-        <div class="problem-item">
-          <span class="problem-x" aria-hidden="true">✕</span>
-          <span>Pedido mínimo absurdo</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ─────────────────────────────────────────
-       PROVA — quem pediu, recebeu assim
-  ───────────────────────────────────────── -->
-  <section class="s-proof reveal">
-    <div class="container">
-      <div class="sec-head">
-        <h2>Quem pediu, recebeu assim:</h2>
-      </div>
-
-      <div class="proof-grid">
-        <article class="proof-card">
-          <img src="assets/prova-social/print-whatsapp-1.webp" alt="Print de conversa no WhatsApp com cliente satisfeito">
-          <div class="proof-caption">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="#1fad5e" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-            Entregue no prazo
+        <a href="#" class="cat-card js-whatsapp-link">
+          <div class="cat-photo"><img src="assets/derived/garrafa-02-w900.webp" srcset="assets/derived/garrafa-02-w480.webp 360w, assets/derived/garrafa-02-w900.webp 675w, assets/derived/garrafa-02-w1400.webp 1050w" sizes="(max-width: 639px) 100vw, (max-width: 899px) 50vw, 33vw" width="675" height="900" decoding="async" alt="Garrafas térmicas personalizadas" loading="lazy"></div>
+          <div class="cat-info">
+            <h3>Garrafas Térmicas</h3>
+            <p>Uso diário ou presente</p>
+            <span class="cat-link">Quero essa →</span>
           </div>
-        </article>
+        </a>
 
-        <article class="proof-card proof-featured">
-          <img src="assets/prova-social/cliente-produto.webp" alt="Cliente segurando produto personalizado">
-          <div class="proof-caption">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="#1fad5e" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-            Cliente aprovou
+        <a href="#" class="cat-card js-whatsapp-link">
+          <div class="cat-photo"><img src="assets/derived/copo-stanley-02-w900.webp" srcset="assets/derived/copo-stanley-02-w480.webp 360w, assets/derived/copo-stanley-02-w900.webp 675w, assets/derived/copo-stanley-02-w1400.webp 1050w" sizes="(max-width: 639px) 100vw, (max-width: 899px) 50vw, 33vw" width="675" height="900" decoding="async" alt="Copos Stanley personalizados" loading="lazy"></div>
+          <div class="cat-info">
+            <h3>Copos Stanley</h3>
+            <p>Personalizado que impressiona</p>
+            <span class="cat-link">Quero esse →</span>
           </div>
-        </article>
+        </a>
 
-        <article class="proof-card">
-          <img src="assets/prova-social/produto-entregue.webp" alt="Produto personalizado entregue com qualidade">
-          <div class="proof-caption">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="#1fad5e" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-            Qualidade na mão
+        <a href="#" class="cat-card js-whatsapp-link">
+          <div class="cat-photo"><img src="assets/derived/agenda-01-w900.webp" srcset="assets/derived/agenda-01-w480.webp 360w, assets/derived/agenda-01-w900.webp 675w, assets/derived/agenda-01-w1400.webp 960w" sizes="(max-width: 639px) 100vw, (max-width: 899px) 50vw, 33vw" width="675" height="900" decoding="async" alt="Agendas personalizadas" loading="lazy"></div>
+          <div class="cat-info">
+            <h3>Agendas</h3>
+            <p>Organização com identidade</p>
+            <span class="cat-link">Quero essa →</span>
           </div>
-        </article>
-      </div>
-    </div>
-  </section>
+        </a>
 
-
-  <!-- ─────────────────────────────────────────
-       COMO FUNCIONA — 3 passos diretos
-  ───────────────────────────────────────── -->
-  <section class="s-steps reveal">
-    <div class="container">
-      <div class="sec-head">
-        <h2>Simples e direto:</h2>
-      </div>
-
-      <div class="steps-row">
-        <article class="step-item">
-          <div class="step-num">1</div>
-          <div class="step-text">
-            <strong>Você chama no WhatsApp</strong>
-            <p>Conta o que precisa. Respondemos na hora.</p>
+        <a href="#" class="cat-card js-whatsapp-link">
+          <div class="cat-photo"><img src="assets/derived/caneca-w900.webp" srcset="assets/derived/caneca-w480.webp 360w, assets/derived/caneca-w900.webp 675w, assets/derived/caneca-w1400.webp 1050w" sizes="(max-width: 639px) 100vw, (max-width: 899px) 50vw, 33vw" width="675" height="900" decoding="async" alt="Canecas personalizadas" loading="lazy"></div>
+          <div class="cat-info">
+            <h3>Canecas</h3>
+            <p>Simples e marcante</p>
+            <span class="cat-link">Quero essa →</span>
           </div>
-        </article>
+        </a>
 
-        <div class="step-arrow" aria-hidden="true">→</div>
-
-        <article class="step-item">
-          <div class="step-num">2</div>
-          <div class="step-text">
-            <strong>Manda sua ideia</strong>
-            <p>Foto, referência ou descrição. A gente ajuda se precisar.</p>
+        <a href="#" class="cat-card js-whatsapp-link">
+          <div class="cat-photo"><img src="assets/derived/kit-pronto-01-w900.webp" srcset="assets/derived/kit-pronto-01-w480.webp 360w, assets/derived/kit-pronto-01-w900.webp 675w, assets/derived/kit-pronto-01-w1400.webp 900w" sizes="(max-width: 639px) 100vw, (max-width: 899px) 50vw, 33vw" width="675" height="900" decoding="async" alt="Kits personalizados prontos"  loading="lazy"></div>
+          <div class="cat-info">
+            <h3>Kits</h3>
+            <p>Presente pronto</p>
+            <span class="cat-link">Quero um →</span>
           </div>
-        </article>
-
-        <div class="step-arrow" aria-hidden="true">→</div>
-
-        <article class="step-item">
-          <div class="step-num step-num-green">3</div>
-          <div class="step-text">
-            <strong>Recebe seu pedido pronto</strong>
-            <p>Arte aprovada por você, entregue no prazo combinado.</p>
-          </div>
-        </article>
-      </div>
-
-      <div class="steps-cta">
-        <a href="#" class="btn btn-green btn-lg js-whatsapp-link">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.12 1.524 5.855L.057 23.43a.75.75 0 0 0 .916.916l5.57-1.467A11.946 11.946 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.9 0-3.687-.497-5.236-1.37l-.375-.214-3.883 1.023 1.024-3.773-.234-.388A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-          Começar agora
         </a>
       </div>
     </div>
   </section>
 
 
-  <!-- ─────────────────────────────────────────
-       PRODUTOS PERSONALIZADOS — o que oferecemos
-  ───────────────────────────────────────── -->
+  <!-- ═══════════════════════════════════════════════
+       DOBRA 3 — PROVA VISUAL  (qualidade + variedade)
+       Fundo branco. Bento grid com 12 fotos reais.
+  ═══════════════════════════════════════════════ -->
+  <section class="s-prova reveal">
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow dark">Pedidos reais</span>
+        <h2>Olha como fica <em>na prática</em>.</h2>
+        <p>Cada foto é pedido de cliente, entregue do jeito combinado.</p>
+      </div>
+
+      <!-- Marquee infinito: sensação de fluxo contínuo, fade nas bordas dá
+           impressão de que as imagens emergem "de dentro" da página -->
+      <div class="marquee" data-marquee>
+        <div class="marquee-track" data-marquee-track>
+          <figure class="marquee-item"><img src="assets/derived/camisa-02-w900.webp" srcset="assets/derived/camisa-02-w480.webp 360w, assets/derived/camisa-02-w900.webp 675w, assets/derived/camisa-02-w1400.webp 1050w" sizes="(max-width: 639px) 50vw, 200px" width="675" height="900" decoding="async" alt="Camisa personalizada" loading="lazy"></figure>
+          <figure class="marquee-item"><img src="assets/derived/camisa-04-w900.webp" srcset="assets/derived/camisa-04-w480.webp 360w, assets/derived/camisa-04-w900.webp 675w, assets/derived/camisa-04-w1400.webp 1050w" sizes="(max-width: 639px) 50vw, 200px" width="675" height="900" decoding="async" alt="Camisa personalizada com arte" loading="lazy"></figure>
+          <figure class="marquee-item"><img src="assets/derived/garrafa-03-w900.webp" srcset="assets/derived/garrafa-03-w480.webp 360w, assets/derived/garrafa-03-w900.webp 675w, assets/derived/garrafa-03-w1400.webp 960w" sizes="(max-width: 639px) 50vw, 200px" width="675" height="900" decoding="async" alt="Garrafa térmica personalizada" loading="lazy"></figure>
+          <figure class="marquee-item"><img src="assets/derived/camisa-igreja-01-w900.webp" srcset="assets/derived/camisa-igreja-01-w480.webp 384w, assets/derived/camisa-igreja-01-w900.webp 720w, assets/derived/camisa-igreja-01-w1400.webp 1080w" sizes="(max-width: 639px) 50vw, 200px" width="720" height="900" decoding="async" alt="Camisa personalizada para igreja" loading="lazy"></figure>
+          <figure class="marquee-item"><img src="assets/derived/copo-stanley-time-03-w900.webp" srcset="assets/derived/copo-stanley-time-03-w480.webp 480w, assets/derived/copo-stanley-time-03-w900.webp 900w, assets/derived/copo-stanley-time-03-w1400.webp 1400w" sizes="(max-width: 639px) 50vw, 200px" width="900" height="675" decoding="async" alt="Copo Stanley personalizado com time" loading="lazy"></figure>
+          <figure class="marquee-item"><img src="assets/derived/camisa-05-w900.webp" srcset="assets/derived/camisa-05-w480.webp 360w, assets/derived/camisa-05-w900.webp 675w, assets/derived/camisa-05-w1400.webp 1050w" sizes="(max-width: 639px) 50vw, 200px" width="675" height="900" decoding="async" alt="Camisa personalizada" loading="lazy"></figure>
+          <figure class="marquee-item"><img src="assets/derived/kit-bolsa-garrafa-toalha-01-w900.webp" srcset="assets/derived/kit-bolsa-garrafa-toalha-01-w480.webp 360w, assets/derived/kit-bolsa-garrafa-toalha-01-w900.webp 675w, assets/derived/kit-bolsa-garrafa-toalha-01-w1400.webp 960w" sizes="(max-width: 639px) 50vw, 200px" width="675" height="900" decoding="async" alt="Kit de bolsa, garrafa e toalha personalizados" loading="lazy"></figure>
+          <figure class="marquee-item"><img src="assets/derived/camisa-06-w900.webp" srcset="assets/derived/camisa-06-w480.webp 360w, assets/derived/camisa-06-w900.webp 675w, assets/derived/camisa-06-w1400.webp 1050w" sizes="(max-width: 639px) 50vw, 200px" width="675" height="900" decoding="async" alt="Camisa personalizada" loading="lazy"></figure>
+          <figure class="marquee-item"><img src="assets/derived/garrafa-04-w900.webp" srcset="assets/derived/garrafa-04-w480.webp 360w, assets/derived/garrafa-04-w900.webp 675w, assets/derived/garrafa-04-w1400.webp 1050w" sizes="(max-width: 639px) 50vw, 200px" width="675" height="900" decoding="async" alt="Garrafa térmica personalizada" loading="lazy"></figure>
+          <figure class="marquee-item"><img src="assets/derived/camisa-07-w900.webp" srcset="assets/derived/camisa-07-w480.webp 360w, assets/derived/camisa-07-w900.webp 675w, assets/derived/camisa-07-w1400.webp 1050w" sizes="(max-width: 639px) 50vw, 200px" width="675" height="900" decoding="async" alt="Camisa personalizada" loading="lazy"></figure>
+          <figure class="marquee-item"><img src="assets/derived/kit-garrafa-agenda-01-w900.webp" srcset="assets/derived/kit-garrafa-agenda-01-w480.webp 360w, assets/derived/kit-garrafa-agenda-01-w900.webp 675w, assets/derived/kit-garrafa-agenda-01-w1400.webp 960w" sizes="(max-width: 639px) 50vw, 200px" width="675" height="900" decoding="async" alt="Kit de garrafa e agenda" loading="lazy"></figure>
+          <figure class="marquee-item"><img src="assets/derived/garrafa-05-w900.webp" srcset="assets/derived/garrafa-05-w480.webp 360w, assets/derived/garrafa-05-w900.webp 675w, assets/derived/garrafa-05-w1400.webp 1050w" sizes="(max-width: 639px) 50vw, 200px" width="675" height="900" decoding="async" alt="Garrafa térmica personalizada" loading="lazy"></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       DOBRA 4 — OBJEÇÃO  (remover travas mentais)
+       Fundo escuro. 4 blocos, quebra de objeção direta.
+  ═══════════════════════════════════════════════ -->
+  <section class="s-objecoes reveal">
+    <div class="container">
+      <div class="sec-head on-dark">
+        <span class="eyebrow gold">Sem enrolação</span>
+        <h2>Sem complicação <em>pra você</em>.</h2>
+      </div>
+
+      <div class="obj-grid">
+        <article class="obj-item">
+          <div class="obj-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <h3>Produção rápida de verdade</h3>
+          <p>Nada de ficar esperando semanas.</p>
+        </article>
+
+        <article class="obj-item">
+          <div class="obj-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+          </div>
+          <h3>Pode pedir pouco</h3>
+          <p>Sem quantidade mínima absurda.</p>
+        </article>
+
+        <article class="obj-item">
+          <div class="obj-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><circle cx="7" cy="7" r="1.5"/></svg>
+          </div>
+          <h3>A gente te ajuda na arte</h3>
+          <p>Mesmo sem ideia pronta.</p>
+        </article>
+
+        <article class="obj-item">
+          <div class="obj-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3>Tudo pelo WhatsApp</h3>
+          <p>Simples e direto.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       DOBRA 5 — PROCESSO  (reduzir incerteza)
+       Fundo off-white. 3 passos visuais.
+  ═══════════════════════════════════════════════ -->
+  <section class="s-processo reveal">
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow dark">Processo</span>
+        <h2>Como <em>funciona</em>.</h2>
+        <p>Três passos — do primeiro oi ao pedido na sua mão.</p>
+      </div>
+
+      <div class="steps">
+        <article class="step">
+          <div class="step-photo"><img src="assets/derived/detalhe-estampa-01-w900.webp" srcset="assets/derived/detalhe-estampa-01-w480.webp 360w, assets/derived/detalhe-estampa-01-w900.webp 675w, assets/derived/detalhe-estampa-01-w1400.webp 900w" sizes="(max-width: 1023px) 92vw, 42vw" width="675" height="900" decoding="async" alt="Detalhe da estampa" loading="lazy"></div>
+          <div class="step-body">
+            <span class="step-num">01</span>
+            <h3>Você chama no WhatsApp</h3>
+            <p>Conta o que precisa. Respondemos na hora, sem burocracia.</p>
+          </div>
+        </article>
+
+        <article class="step">
+          <div class="step-photo"><img src="assets/derived/camisa-08-w900.webp" srcset="assets/derived/camisa-08-w480.webp 360w, assets/derived/camisa-08-w900.webp 675w, assets/derived/camisa-08-w1400.webp 1050w" sizes="(max-width: 1023px) 92vw, 42vw" width="675" height="900" decoding="async" alt="Arte sendo preparada" loading="lazy"></div>
+          <div class="step-body">
+            <span class="step-num">02</span>
+            <h3>A gente monta sua arte</h3>
+            <p>Foto, referência ou descrição. Se não tiver ideia, a gente sugere.</p>
+          </div>
+        </article>
+
+        <article class="step">
+          <div class="step-photo"><img src="assets/derived/kit-familia-camisas-01-w900.webp" srcset="assets/derived/kit-familia-camisas-01-w480.webp 360w, assets/derived/kit-familia-camisas-01-w900.webp 675w, assets/derived/kit-familia-camisas-01-w1400.webp 1050w" sizes="(max-width: 1023px) 92vw, 42vw" width="675" height="900" decoding="async" alt="Produto pronto para entrega" loading="lazy"></div>
+          <div class="step-body">
+            <span class="step-num">03</span>
+            <h3>Produzimos e entregamos</h3>
+            <p>Arte aprovada por você, produto pronto no prazo combinado.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="processo-cta">
+        <a href="#" class="btn btn-whatsapp btn-lg js-whatsapp-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.12 1.524 5.855L.057 23.43a.75.75 0 0 0 .916.916l5.57-1.467A11.946 11.946 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.9 0-3.687-.497-5.236-1.37l-.375-.214-3.883 1.023 1.024-3.773-.234-.388A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Começar meu pedido agora
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       DOBRA 6 — KITS  (aumento de ticket)
+       Fundo branco. Cards grandes, badge dourada.
+  ═══════════════════════════════════════════════ -->
   <section class="s-kits reveal">
     <div class="container">
       <div class="sec-head">
-        <h2>Produtos personalizados que oferecemos</h2>
+        <span class="eyebrow dark">Kits prontos</span>
+        <h2>Quer algo pronto? <em>Vai de kit.</em></h2>
+        <p>Presente completo, já pensado — você só escolhe pra quem.</p>
       </div>
 
       <div class="kits-grid">
-
-        <article class="kit-card">
+        <a href="#" class="kit-card js-whatsapp-link">
           <div class="kit-photo">
-            <img src="assets/IMG_0335.jpg" alt="Camisas personalizadas">
-            <span class="kit-badge">Popular</span>
+            <img src="assets/derived/kit-familia-camisas-01-w900.webp" srcset="assets/derived/kit-familia-camisas-01-w480.webp 360w, assets/derived/kit-familia-camisas-01-w900.webp 675w, assets/derived/kit-familia-camisas-01-w1400.webp 1050w" sizes="(max-width: 639px) 100vw, (max-width: 899px) 50vw, 32vw" width="675" height="900" decoding="async" alt="Kit Família em camisas personalizadas" loading="lazy">
+            <span class="kit-badge">Mais pedido</span>
           </div>
           <div class="kit-info">
-            <h3>Estampas em Camisas</h3>
-            <p>Camisas personalizadas com sua arte, tema ou logo, com acabamento de qualidade.</p>
-            <a href="#" class="kit-cta js-whatsapp-link">Quero minha camisa →</a>
+            <h3>Kit Família</h3>
+            <p>Camisas combinando para toda a família se sentir parte do momento.</p>
+            <span class="kit-cta">Quero esse kit →</span>
           </div>
-        </article>
+        </a>
 
-        <article class="kit-card">
+        <a href="#" class="kit-card js-whatsapp-link">
           <div class="kit-photo">
-            <img src="assets/IMG_0353.jpg" alt="Garrafas personalizadas">
+            <img src="assets/derived/kit-amigos-copos-01-w900.webp" srcset="assets/derived/kit-amigos-copos-01-w480.webp 360w, assets/derived/kit-amigos-copos-01-w900.webp 675w, assets/derived/kit-amigos-copos-01-w1400.webp 1050w" sizes="(max-width: 639px) 100vw, (max-width: 899px) 50vw, 32vw" width="675" height="900" decoding="async" alt="Kit com várias canecas no mesmo padrão para turma, time e grupo" loading="lazy">
+            <span class="kit-badge kit-badge-alt">Turma, time, galera</span>
           </div>
           <div class="kit-info">
-            <h3>Estampas em Garrafas</h3>
-            <p>Garrafas personalizadas para presentes, escola, academia e uso no dia a dia.</p>
-            <a href="#" class="kit-cta js-whatsapp-link">Quero minha garrafa →</a>
+            <h3>Kit Amigos</h3>
+            <p>Várias canecas (ou copos) no mesmo estilo: para turma, pessoal do futebol, rolê com a galera. É kit pra quem vive junto, não pro embrulho.</p>
+            <span class="kit-cta">Quero esse kit →</span>
           </div>
-        </article>
+        </a>
 
-        <article class="kit-card">
+        <a href="#" class="kit-card js-whatsapp-link">
           <div class="kit-photo">
-            <img src="assets/kits/kit-empresa-brinde.webp" alt="Outros produtos personalizados">
+            <img src="assets/derived/kit-festa-tacas-01-w900.webp" srcset="assets/derived/kit-festa-tacas-01-w480.webp 360w, assets/derived/kit-festa-tacas-01-w900.webp 675w, assets/derived/kit-festa-tacas-01-w1400.webp 1050w" sizes="(max-width: 639px) 100vw, (max-width: 899px) 50vw, 32vw" width="675" height="900" decoding="async" alt="Kit Festa com taças personalizadas" loading="lazy">
+            <span class="kit-badge kit-badge-alt">Ideal para festas</span>
           </div>
           <div class="kit-info">
-            <h3>Outros Personalizados</h3>
-            <p>Tambem trabalhamos com brindes e outros produtos personalizados para empresas e eventos.</p>
-            <a href="#" class="kit-cta js-whatsapp-link">Pedir orçamento →</a>
+            <h3>Kit Evento</h3>
+            <p>Taças e itens temáticos que transformam a festa em lembrança.</p>
+            <span class="kit-cta">Quero esse kit →</span>
           </div>
-        </article>
-
+        </a>
       </div>
     </div>
   </section>
 
 
-  <!-- ─────────────────────────────────────────
-       CTA FINAL — resolve agora
-  ───────────────────────────────────────── -->
-  <section class="s-final-cta">
+  <!-- ═══════════════════════════════════════════════
+       DOBRA 7 — ESCALA  (confiança + volume)
+       Fundo off-white cinza. Grid denso uniforme.
+  ═══════════════════════════════════════════════ -->
+  <section class="s-escala reveal">
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow dark">Mais produção</span>
+        <h2>Mais do que <em>você imagina</em>.</h2>
+        <p>Cada pedido diferente — todos saem com o mesmo capricho.</p>
+      </div>
+
+      <!-- Dois marquees em direções opostas: sensação de profundidade
+           + dinâmica visual forte, sem ser cansativo -->
+      <div class="marquee-stack">
+        <div class="marquee" data-marquee>
+          <div class="marquee-track" data-marquee-track data-speed="55">
+            <figure class="marquee-item"><img src="assets/derived/camisa-09-w900.webp" srcset="assets/derived/camisa-09-w480.webp 360w, assets/derived/camisa-09-w900.webp 675w, assets/derived/camisa-09-w1400.webp 1050w" sizes="(max-width: 639px) 40vw, 220px" width="675" height="900" decoding="async" alt="Camisa personalizada" loading="lazy"></figure>
+            <figure class="marquee-item"><img src="assets/derived/camisa-10-w900.webp" srcset="assets/derived/camisa-10-w480.webp 360w, assets/derived/camisa-10-w900.webp 675w, assets/derived/camisa-10-w1400.webp 1050w" sizes="(max-width: 639px) 40vw, 220px" width="675" height="900" decoding="async" alt="Camisa personalizada" loading="lazy"></figure>
+            <figure class="marquee-item"><img src="assets/derived/camisa-11-w900.webp" srcset="assets/derived/camisa-11-w480.webp 360w, assets/derived/camisa-11-w900.webp 675w, assets/derived/camisa-11-w1400.webp 1050w" sizes="(max-width: 639px) 40vw, 220px" width="675" height="900" decoding="async" alt="Camisa personalizada" loading="lazy"></figure>
+            <figure class="marquee-item"><img src="assets/derived/camisa-12-w900.webp" srcset="assets/derived/camisa-12-w480.webp 360w, assets/derived/camisa-12-w900.webp 675w, assets/derived/camisa-12-w1400.webp 1050w" sizes="(max-width: 639px) 40vw, 220px" width="675" height="900" decoding="async" alt="Camisa personalizada" loading="lazy"></figure>
+            <figure class="marquee-item"><img src="assets/derived/camisa-13-w900.webp" srcset="assets/derived/camisa-13-w480.webp 360w, assets/derived/camisa-13-w900.webp 675w, assets/derived/camisa-13-w1400.webp 1050w" sizes="(max-width: 639px) 40vw, 220px" width="675" height="900" decoding="async" alt="Camisa personalizada" loading="lazy"></figure>
+            <figure class="marquee-item"><img src="assets/derived/garrafa-06-w900.webp" srcset="assets/derived/garrafa-06-w480.webp 360w, assets/derived/garrafa-06-w900.webp 675w, assets/derived/garrafa-06-w1400.webp 1050w" sizes="(max-width: 639px) 40vw, 220px" width="675" height="900" decoding="async" alt="Garrafa térmica personalizada" loading="lazy"></figure>
+            <figure class="marquee-item"><img src="assets/derived/camisa-14-w900.webp" srcset="assets/derived/camisa-14-w480.webp 360w, assets/derived/camisa-14-w900.webp 675w, assets/derived/camisa-14-w1400.webp 1050w" sizes="(max-width: 639px) 40vw, 220px" width="675" height="900" decoding="async" alt="Camisa personalizada" loading="lazy"></figure>
+            <figure class="marquee-item"><img src="assets/derived/camisa-15-w900.webp" srcset="assets/derived/camisa-15-w480.webp 360w, assets/derived/camisa-15-w900.webp 675w, assets/derived/camisa-15-w1400.webp 1050w" sizes="(max-width: 639px) 40vw, 220px" width="675" height="900" decoding="async" alt="Camisa personalizada" loading="lazy"></figure>
+            <figure class="marquee-item"><img src="assets/derived/camisa-16-w900.webp" srcset="assets/derived/camisa-16-w480.webp 360w, assets/derived/camisa-16-w900.webp 675w, assets/derived/camisa-16-w1400.webp 1050w" sizes="(max-width: 639px) 40vw, 220px" width="675" height="900" decoding="async" alt="Camisa personalizada" loading="lazy"></figure>
+            <figure class="marquee-item"><img src="assets/derived/camisa-17-w900.webp" srcset="assets/derived/camisa-17-w480.webp 360w, assets/derived/camisa-17-w900.webp 675w, assets/derived/camisa-17-w1400.webp 1050w" sizes="(max-width: 639px) 40vw, 220px" width="675" height="900" decoding="async" alt="Camisa personalizada" loading="lazy"></figure>
+          </div>
+        </div>
+
+        <div class="marquee" data-marquee>
+          <div class="marquee-track marquee-reverse" data-marquee-track data-speed="65">
+            <figure class="marquee-item"><img src="assets/derived/camisa-18-w900.webp" srcset="assets/derived/camisa-18-w480.webp 360w, assets/derived/camisa-18-w900.webp 675w, assets/derived/camisa-18-w1400.webp 900w" sizes="(max-width: 639px) 40vw, 220px" width="675" height="900" decoding="async" alt="Camisa estampada" loading="lazy"></figure>
+            <figure class="marquee-item"><img src="assets/derived/camisa-igreja-02-w900.webp" srcset="assets/derived/camisa-igreja-02-w480.webp 360w, assets/derived/camisa-igreja-02-w900.webp 675w, assets/derived/camisa-igreja-02-w1400.webp 1050w" sizes="(max-width: 639px) 40vw, 220px" width="675" height="900" decoding="async" alt="Camisa personalizada para igreja" loading="lazy"></figure>
+            <figure class="marquee-item"><img src="assets/derived/garrafa-07-w900.webp" srcset="assets/derived/garrafa-07-w480.webp 360w, assets/derived/garrafa-07-w900.webp 675w, assets/derived/garrafa-07-w1400.webp 1050w" sizes="(max-width: 639px) 40vw, 220px" width="675" height="900" decoding="async" alt="Garrafa térmica personalizada" loading="lazy"></figure>
+            <figure class="marquee-item"><img src="assets/derived/garrafa-08-w900.webp" srcset="assets/derived/garrafa-08-w480.webp 480w, assets/derived/garrafa-08-w900.webp 900w, assets/derived/garrafa-08-w1400.webp 1400w" sizes="(max-width: 639px) 40vw, 220px" width="900" height="675" decoding="async" alt="Garrafa personalizada" loading="lazy"></figure>
+            <figure class="marquee-item"><img src="assets/derived/garrafa-09-w900.webp" srcset="assets/derived/garrafa-09-w480.webp 360w, assets/derived/garrafa-09-w900.webp 675w, assets/derived/garrafa-09-w1400.webp 1050w" sizes="(max-width: 639px) 40vw, 220px" width="675" height="900" decoding="async" alt="Garrafas térmicas personalizadas" loading="lazy"></figure>
+            <figure class="marquee-item"><img src="assets/derived/agenda-02-w900.webp" srcset="assets/derived/agenda-02-w480.webp 360w, assets/derived/agenda-02-w900.webp 675w, assets/derived/agenda-02-w1400.webp 1050w" sizes="(max-width: 639px) 40vw, 220px" width="675" height="900" decoding="async" alt="Agenda personalizada" loading="lazy"></figure>
+            <figure class="marquee-item"><img src="assets/derived/agenda-03-w900.webp" srcset="assets/derived/agenda-03-w480.webp 360w, assets/derived/agenda-03-w900.webp 675w, assets/derived/agenda-03-w1400.webp 960w" sizes="(max-width: 639px) 40vw, 220px" width="675" height="900" decoding="async" alt="Agenda personalizada" loading="lazy"></figure>
+            <figure class="marquee-item"><img src="assets/derived/kit-stanley-caneca-suporte-01-w900.webp" srcset="assets/derived/kit-stanley-caneca-suporte-01-w480.webp 360w, assets/derived/kit-stanley-caneca-suporte-01-w900.webp 675w, assets/derived/kit-stanley-caneca-suporte-01-w1400.webp 1050w" sizes="(max-width: 639px) 40vw, 220px" width="675" height="900" decoding="async" alt="Kit com copo Stanley e caneca" loading="lazy"></figure>
+            <figure class="marquee-item"><img src="assets/derived/kit-canecas-bebidas-01-w900.webp" srcset="assets/derived/kit-canecas-bebidas-01-w480.webp 360w, assets/derived/kit-canecas-bebidas-01-w900.webp 675w, assets/derived/kit-canecas-bebidas-01-w1400.webp 1050w" sizes="(max-width: 639px) 40vw, 220px" width="675" height="900" decoding="async" alt="Kit de canecas personalizadas" loading="lazy"></figure>
+            <figure class="marquee-item"><img src="assets/derived/garrafa-02-w900.webp" srcset="assets/derived/garrafa-02-w480.webp 360w, assets/derived/garrafa-02-w900.webp 675w, assets/derived/garrafa-02-w1400.webp 1050w" sizes="(max-width: 639px) 40vw, 220px" width="675" height="900" decoding="async" alt="Garrafa térmica personalizada" loading="lazy"></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       DOBRA 8 — DETALHES  (qualidade final)
+       Fundo escuro. 3 fotos grandes, premium.
+  ═══════════════════════════════════════════════ -->
+  <section class="s-detalhes reveal">
+    <div class="container">
+      <div class="sec-head on-dark">
+        <span class="eyebrow gold">Acabamento</span>
+        <h2>Detalhes que <em>fazem diferença</em>.</h2>
+        <p>Tinta, traço, textura. A gente cuida do que o olho percebe.</p>
+      </div>
+
+      <div class="det-grid">
+        <figure class="det-item"><img src="assets/derived/detalhe-estampa-01-w900.webp" srcset="assets/derived/detalhe-estampa-01-w480.webp 360w, assets/derived/detalhe-estampa-01-w900.webp 675w, assets/derived/detalhe-estampa-01-w1400.webp 900w" sizes="(max-width: 1023px) 92vw, 33vw" width="675" height="900" decoding="async" alt="Close da estampa personalizada" loading="lazy"></figure>
+        <figure class="det-item"><img src="assets/derived/detalhe-produto-01-w900.webp" srcset="assets/derived/detalhe-produto-01-w480.webp 360w, assets/derived/detalhe-produto-01-w900.webp 675w, assets/derived/detalhe-produto-01-w1400.webp 1050w" sizes="(max-width: 1023px) 92vw, 33vw" width="675" height="900" decoding="async" alt="Acabamento do produto personalizado" loading="lazy"></figure>
+        <figure class="det-item"><img src="assets/derived/camisa-18-w900.webp" srcset="assets/derived/camisa-18-w480.webp 360w, assets/derived/camisa-18-w900.webp 675w, assets/derived/camisa-18-w1400.webp 900w" sizes="(max-width: 1023px) 92vw, 33vw" width="675" height="900" decoding="async" alt="Textura da estampa de perto" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       CTA FINAL — conversão direta
+  ═══════════════════════════════════════════════ -->
+  <section class="s-cta-final">
+    <div class="cta-bg" aria-hidden="true"></div>
     <div class="container cta-inner">
-      <h2>Chama agora e resolve <br>seu presente hoje</h2>
-      <a href="#" class="btn btn-white btn-lg js-whatsapp-link">
+      <span class="eyebrow gold">Vamos começar?</span>
+      <h2>Chama no WhatsApp e <em>já começa</em> seu pedido.</h2>
+      <p class="cta-sub">Respondemos rápido e te ajudamos em tudo.</p>
+
+      <a href="#" class="btn btn-whatsapp btn-xl js-whatsapp-link">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.12 1.524 5.855L.057 23.43a.75.75 0 0 0 .916.916l5.57-1.467A11.946 11.946 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.9 0-3.687-.497-5.236-1.37l-.375-.214-3.883 1.023 1.024-3.773-.234-.388A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
         Falar no WhatsApp
       </a>
-      <p class="cta-sub">Resposta rápida · Sem enrolação</p>
+
+      <p class="cta-proof">+ de 100 pedidos entregues</p>
     </div>
   </section>
+
+
+  <!-- Rodapé discreto -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© Paraíso VIP Estamparia · Personalizados sob medida</p>
+      <a href="#" class="footer-link js-whatsapp-link">Falar no WhatsApp →</a>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
