@@ -13,9 +13,6 @@
 </head>
 <body>
 
-  <!-- ═══════════════════════════════════════════════
-       TOPBAR — sempre visível, CTA encurta compra
-  ═══════════════════════════════════════════════ -->
   <header class="topbar">
     <div class="container topbar-inner">
       <a href="#hero" class="topbar-brand" aria-label="Paraíso VIP Estamparia">
@@ -29,17 +26,10 @@
   </header>
 
 
-  <!-- ═══════════════════════════════════════════════
-       DOBRA 1 — HERO  (parallax floating premium)
-       Texto centralizado + 8 imagens flutuantes de fundo
-       Overlay escuro + blur pra legibilidade
-  ═══════════════════════════════════════════════ -->
   <section class="hero" id="hero">
     <div class="hero-glow" aria-hidden="true"></div>
 
-    <!-- Camada de imagens flutuantes (parallax no desktop) -->
     <div class="hero-parallax" aria-hidden="true">
-      <!-- Camada frontal (maiores, mais nítidas, nas quinas) -->
       <div class="fx fx-1"  data-depth="0.6"><img src="assets/derived/camisa-01-w900.webp" srcset="assets/derived/camisa-01-w480.webp 360w, assets/derived/camisa-01-w900.webp 675w, assets/derived/camisa-01-w1400.webp 1050w" sizes="(max-width: 639px) 100px, 200px" width="675" height="900" decoding="async" fetchpriority="low" alt=""></div>
       <div class="fx fx-2"  data-depth="2"><img src="assets/derived/garrafa-01-w900.webp" srcset="assets/derived/garrafa-01-w480.webp 360w, assets/derived/garrafa-01-w900.webp 675w, assets/derived/garrafa-01-w1400.webp 1050w" sizes="(max-width: 639px) 100px, 200px" width="675" height="900" decoding="async" fetchpriority="low" alt=""></div>
       <div class="fx fx-3"  data-depth="1.2"><img src="assets/derived/copo-stanley-01-w900.webp" srcset="assets/derived/copo-stanley-01-w480.webp 480w, assets/derived/copo-stanley-01-w900.webp 900w, assets/derived/copo-stanley-01-w1400.webp 1280w" sizes="(max-width: 639px) 100px, 200px" width="900" height="675" decoding="async" fetchpriority="low" alt=""></div>
@@ -48,17 +38,14 @@
       <div class="fx fx-6"  data-depth="3"><img src="assets/derived/kit-pronto-01-w900.webp" srcset="assets/derived/kit-pronto-01-w480.webp 360w, assets/derived/kit-pronto-01-w900.webp 675w, assets/derived/kit-pronto-01-w1400.webp 900w" sizes="(max-width: 639px) 100px, 200px" width="675" height="900" decoding="async" fetchpriority="low" alt=""></div>
       <div class="fx fx-7"  data-depth="1"><img src="assets/derived/caneca-01-w900.webp" srcset="assets/derived/caneca-01-w480.webp 360w, assets/derived/caneca-01-w900.webp 675w, assets/derived/caneca-01-w1400.webp 900w" sizes="(max-width: 639px) 100px, 200px" width="675" height="900" decoding="async" fetchpriority="low" alt=""></div>
       <div class="fx fx-8"  data-depth="2.4"><img src="assets/derived/detalhe-estampa-01-w900.webp" srcset="assets/derived/detalhe-estampa-01-w480.webp 360w, assets/derived/detalhe-estampa-01-w900.webp 675w, assets/derived/detalhe-estampa-01-w1400.webp 900w" sizes="(max-width: 639px) 100px, 200px" width="675" height="900" decoding="async" fetchpriority="low" alt=""></div>
-      <!-- Camada de fundo (menores, mais blur, preenchem o ambiente) -->
       <div class="fx fx-9"  data-depth="0.4"><img src="assets/derived/kit-familia-camisas-01-w900.webp" srcset="assets/derived/kit-familia-camisas-01-w480.webp 360w, assets/derived/kit-familia-camisas-01-w900.webp 675w, assets/derived/kit-familia-camisas-01-w1400.webp 1050w" sizes="(max-width: 639px) 100px, 200px" width="675" height="900" decoding="async" fetchpriority="low" alt=""></div>
       <div class="fx fx-10" data-depth="1.8"><img src="assets/derived/garrafa-03-w900.webp" srcset="assets/derived/garrafa-03-w480.webp 360w, assets/derived/garrafa-03-w900.webp 675w, assets/derived/garrafa-03-w1400.webp 960w" sizes="(max-width: 639px) 100px, 200px" width="675" height="900" decoding="async" fetchpriority="low" alt=""></div>
       <div class="fx fx-11" data-depth="2.2"><img src="assets/derived/copo-stanley-time-03-w900.webp" srcset="assets/derived/copo-stanley-time-03-w480.webp 480w, assets/derived/copo-stanley-time-03-w900.webp 900w, assets/derived/copo-stanley-time-03-w1400.webp 1400w" sizes="(max-width: 639px) 100px, 200px" width="900" height="675" decoding="async" fetchpriority="low" alt=""></div>
       <div class="fx fx-12" data-depth="1.5"><img src="assets/derived/camisa-igreja-01-w900.webp" srcset="assets/derived/camisa-igreja-01-w480.webp 384w, assets/derived/camisa-igreja-01-w900.webp 720w, assets/derived/camisa-igreja-01-w1400.webp 1080w" sizes="(max-width: 639px) 100px, 200px" width="720" height="900" decoding="async" fetchpriority="low" alt=""></div>
     </div>
 
-    <!-- Vignette central: escurece o miolo pra legibilidade -->
     <div class="hero-vignette" aria-hidden="true"></div>
 
-    <!-- Conteúdo central -->
     <div class="container hero-content">
       <h1 class="hero-title">
         <span class="hero-title__gold">Presentes</span>
@@ -80,10 +67,6 @@
   </section>
 
 
-  <!-- ═══════════════════════════════════════════════
-       DOBRA 2 — ESCOLHA RÁPIDA  (direção de decisão)
-       Fundo off-white. 6 categorias com imagem real.
-  ═══════════════════════════════════════════════ -->
   <section class="s-categorias reveal">
     <div class="container">
       <div class="sec-head">
@@ -151,10 +134,6 @@
   </section>
 
 
-  <!-- ═══════════════════════════════════════════════
-       DOBRA 3 — PROVA VISUAL  (qualidade + variedade)
-       Fundo branco. Bento grid com 12 fotos reais.
-  ═══════════════════════════════════════════════ -->
   <section class="s-prova reveal">
     <div class="container">
       <div class="sec-head">
@@ -163,8 +142,6 @@
         <p>Cada foto é pedido de cliente, entregue do jeito combinado.</p>
       </div>
 
-      <!-- Marquee infinito: sensação de fluxo contínuo, fade nas bordas dá
-           impressão de que as imagens emergem "de dentro" da página -->
       <div class="marquee" data-marquee>
         <div class="marquee-track" data-marquee-track>
           <figure class="marquee-item"><img src="assets/derived/camisa-02-w900.webp" srcset="assets/derived/camisa-02-w480.webp 360w, assets/derived/camisa-02-w900.webp 675w, assets/derived/camisa-02-w1400.webp 1050w" sizes="(max-width: 639px) 50vw, 200px" width="675" height="900" decoding="async" alt="Camisa personalizada" loading="lazy"></figure>
@@ -185,10 +162,6 @@
   </section>
 
 
-  <!-- ═══════════════════════════════════════════════
-       DOBRA 4 — OBJEÇÃO  (remover travas mentais)
-       Fundo escuro. 4 blocos, quebra de objeção direta.
-  ═══════════════════════════════════════════════ -->
   <section class="s-objecoes reveal">
     <div class="container">
       <div class="sec-head on-dark">
@@ -233,10 +206,6 @@
   </section>
 
 
-  <!-- ═══════════════════════════════════════════════
-       DOBRA 5 — PROCESSO  (reduzir incerteza)
-       Fundo off-white. 3 passos visuais.
-  ═══════════════════════════════════════════════ -->
   <section class="s-processo reveal">
     <div class="container">
       <div class="sec-head">
@@ -284,10 +253,6 @@
   </section>
 
 
-  <!-- ═══════════════════════════════════════════════
-       DOBRA 6 — KITS  (aumento de ticket)
-       Fundo branco. Cards grandes, badge dourada.
-  ═══════════════════════════════════════════════ -->
   <section class="s-kits reveal">
     <div class="container">
       <div class="sec-head">
@@ -337,10 +302,6 @@
   </section>
 
 
-  <!-- ═══════════════════════════════════════════════
-       DOBRA 7 — ESCALA  (confiança + volume)
-       Fundo off-white cinza. Grid denso uniforme.
-  ═══════════════════════════════════════════════ -->
   <section class="s-escala reveal">
     <div class="container">
       <div class="sec-head">
@@ -349,8 +310,6 @@
         <p>Cada pedido diferente — todos saem com o mesmo capricho.</p>
       </div>
 
-      <!-- Dois marquees em direções opostas: sensação de profundidade
-           + dinâmica visual forte, sem ser cansativo -->
       <div class="marquee-stack">
         <div class="marquee" data-marquee>
           <div class="marquee-track" data-marquee-track data-speed="55">
@@ -386,10 +345,6 @@
   </section>
 
 
-  <!-- ═══════════════════════════════════════════════
-       DOBRA 8 — DETALHES  (qualidade final)
-       Fundo escuro. 3 fotos grandes, premium.
-  ═══════════════════════════════════════════════ -->
   <section class="s-detalhes reveal">
     <div class="container">
       <div class="sec-head on-dark">
@@ -407,9 +362,6 @@
   </section>
 
 
-  <!-- ═══════════════════════════════════════════════
-       CTA FINAL — conversão direta
-  ═══════════════════════════════════════════════ -->
   <section class="s-cta-final">
     <div class="cta-bg" aria-hidden="true"></div>
     <div class="container cta-inner">
@@ -427,7 +379,6 @@
   </section>
 
 
-  <!-- Rodapé discreto -->
   <footer class="footer">
     <div class="container footer-inner">
       <p>© Paraíso VIP Estamparia · Personalizados sob medida</p>
