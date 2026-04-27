@@ -34,22 +34,18 @@
 
   /* Gradiente tipo logo — só o bloco .hero-title (H1) */
   --text-gold-logo: linear-gradient(
-    175deg,
-    #fffae2 0%,
-    #ffd848 10%,
-    #fff5b0 22%,
-    #e89018 40%,
-    #b86814 60%,
-    #d4a028 76%,
-    #582e08 100%
+    270deg,
+    #F2AD3E 6.31%,
+    #EAD35B 25.81%,
+    #F2AD3E 46.96%,
+    #EAD35B 93.69%
   );
   --text-blue-logo: radial-gradient(
-    115% 118% at 50% 42%,
-    #aadeff 0%,
-    #1c8fff 18%,
-    #0855c0 44%,
-    #041a88 70%,
-    #010a28 100%
+    62.58% 62.58% at 50% 34.84%,
+    #128BFF 0%,
+    #0D5DCF 22.32%,
+    #082F9F 46.52%,
+    #100D2E 100%
   );
 
   /* Superfícies douradas: badges, tracinhos, botões dourados */
