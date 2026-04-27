@@ -34,22 +34,22 @@
 
   /* Gradiente tipo logo — só o bloco .hero-title (H1) */
   --text-gold-logo: linear-gradient(
-    180deg,
-    #f7edc4 0%,
-    #e8c86a 14%,
-    #fcf6ba 26%,
-    #bf953f 42%,
-    #aa771c 58%,
-    #d4af37 78%,
-    #5a3d0a 100%
+    175deg,
+    #fffae2 0%,
+    #ffd848 10%,
+    #fff5b0 22%,
+    #e89018 40%,
+    #b86814 60%,
+    #d4a028 76%,
+    #582e08 100%
   );
   --text-blue-logo: radial-gradient(
-    120% 115% at 50% 45%,
-    #9fd4ff 0%,
-    #128BFF 22%,
-    #0b5ab8 48%,
-    #082F9F 72%,
-    #100D2E 100%
+    115% 118% at 50% 42%,
+    #aadeff 0%,
+    #1c8fff 18%,
+    #0855c0 44%,
+    #041a88 70%,
+    #010a28 100%
   );
 
   /* Superfícies douradas: badges, tracinhos, botões dourados */
@@ -63,9 +63,10 @@
 
   /* Profundidade 3D dourada (text-shadow; simula luz, não amarelo chapado) */
   --shadow-gold-3d:
-    2px 2px 0 #a67c2e,
-    4px 4px 0 #7a5a1a,
-    6px 6px 0 rgba(45, 32, 8, 0.35);
+    1px 1px 0 #985e16,
+    2px 2px 0 #6e4208,
+    3px 3px 0 #482a04,
+    5px 5px 3px rgba(20, 8, 0, 0.45);
 
   /* Bordas / radius */
   --border:       #e5e4e0;
@@ -460,7 +461,7 @@ p { line-height: 1.65; font-weight: 400; text-transform: none; }
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: -0.02em;
-  -webkit-text-stroke: 2px #ffffff;
+  -webkit-text-stroke: 3px #ffffff;
   paint-order: stroke fill;
   overflow-wrap: break-word;
   word-break: normal;
@@ -468,6 +469,7 @@ p { line-height: 1.65; font-weight: 400; text-transform: none; }
   line-height: 1.02;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
+  text-rendering: geometricPrecision;
 }
 /* Linha 1 — dourado metálico (como "Paraíso" na logo) */
 .hero-title__gold {
@@ -476,7 +478,7 @@ p { line-height: 1.65; font-weight: 400; text-transform: none; }
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
-  text-shadow: var(--shadow-gold-3d), 0.05em 0.08em 0 rgba(0,0,0,0.22);
+  text-shadow: var(--shadow-gold-3d), 0.04em 0.07em 0 rgba(0,0,0,0.3);
 }
 /* Linha 2 — azul com brilho central (como "ViP" na logo) */
 .hero-title__blue {
@@ -486,9 +488,10 @@ p { line-height: 1.65; font-weight: 400; text-transform: none; }
           background-clip: text;
   color: transparent;
   text-shadow:
-    2px 2px 0 #082F9F,
-    4px 4px 0 rgba(8, 47, 159, 0.45),
-    6px 6px 0 rgba(16, 13, 46, 0.5);
+    1px 1px 0 #023898,
+    2px 2px 0 #011c68,
+    3px 3px 0 #010840,
+    5px 5px 3px rgba(0, 0, 0, 0.5);
 }
 
 /* Kickers — "Pronto / Rápido / e do seu jeito"
@@ -1144,19 +1147,19 @@ p { line-height: 1.65; font-weight: 400; text-transform: none; }
   }
   .hero-title__gold {
     font-size: clamp(1.9rem, 6.5vw + 0.4rem, 2.75rem);
-    -webkit-text-stroke: 1.45px #ffffff;
+    -webkit-text-stroke: 1.8px #ffffff;
     text-shadow:
-      1px 1px 0 #a67c2e,
-      2px 2px 0 #7a5a1a,
-      3px 3px 0 rgba(50, 35, 8, 0.28);
+      1px 1px 0 #985e16,
+      2px 2px 0 #6e4208,
+      3px 3px 0 rgba(40, 22, 2, 0.38);
   }
   .hero-title__blue {
     font-size: clamp(1.6rem, 5.2vw + 0.35rem, 2.15rem);
-    -webkit-text-stroke: 1.3px #ffffff;
+    -webkit-text-stroke: 1.6px #ffffff;
     text-shadow:
-      1px 1px 0 #0a4a9e,
-      2px 2px 0 rgba(8, 47, 159, 0.5),
-      3px 3px 0 rgba(16, 13, 46, 0.4);
+      1px 1px 0 #023898,
+      2px 2px 0 #011c68,
+      3px 3px 0 rgba(0, 6, 30, 0.42);
   }
 
   .hero-kickers { gap: .45rem; margin-bottom: 2rem; }
